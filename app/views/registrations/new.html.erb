@@ -1,0 +1,14 @@
+<% if flash[:notice] %>
+	<h2>Email Sent Successfully</h2>
+<% end %>
+<%= form_tag registrations_path do |f| %>
+  <h2>Have a question, request, or an issue? Contact us!</h2>
+
+  <p>
+    <%= text_area_tag :message %>
+  </p>
+
+  <p>
+    <%= submit_tag 'Send Mail'%>
+  </p>
+<% end %>
